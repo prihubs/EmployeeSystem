@@ -270,6 +270,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "RegisterForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "RegisterForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
