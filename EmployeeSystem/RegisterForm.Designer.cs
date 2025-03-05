@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             logbtn = new Button();
@@ -46,26 +47,31 @@
             cpass = new TextBox();
             label8 = new Label();
             email = new TextBox();
+            pictureBox2 = new PictureBox();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.PJ_graphics_logo_2021;
-            pictureBox1.Location = new Point(44, 31);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(59, 75);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(217, 213);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.Size = new Size(182, 167);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 128, 0);
+            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(logbtn);
             panel1.Controls.Add(label6);
+            panel1.Controls.Add(label9);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Left;
@@ -98,7 +104,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Poppins Medium", 12F, FontStyle.Bold);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(44, 279);
+            label6.Location = new Point(44, 264);
             label6.Name = "label6";
             label6.Size = new Size(79, 28);
             label6.TabIndex = 2;
@@ -109,7 +115,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Poppins Medium", 12F, FontStyle.Bold);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(44, 260);
+            label5.Location = new Point(44, 245);
             label5.Name = "label5";
             label5.Size = new Size(224, 28);
             label5.TabIndex = 2;
@@ -248,6 +254,27 @@
             email.Size = new Size(133, 29);
             email.TabIndex = 12;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.PJ_graphics_logo_2021;
+            pictureBox2.Location = new Point(12, 6);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(30, 29);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 6;
+            pictureBox2.TabStop = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Poppins Medium", 12F);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(42, 9);
+            label9.Name = "label9";
+            label9.Size = new Size(78, 28);
+            label9.TabIndex = 2;
+            label9.Text = "PRIHUBS";
+            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(8F, 22F);
@@ -275,6 +302,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -299,5 +327,7 @@
         private TextBox cpass;
         private Label label8;
         private TextBox email;
+        private PictureBox pictureBox2;
+        private Label label9;
     }
 }

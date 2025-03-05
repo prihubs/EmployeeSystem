@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
             signbtn = new Button();
-            label6 = new Label();
-            label5 = new Label();
             label1 = new Label();
             closebtn1 = new Label();
             label2 = new Label();
@@ -42,34 +40,32 @@
             pass = new TextBox();
             showbtn = new CheckBox();
             logbtn = new Button();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            label6 = new Label();
+            label9 = new Label();
+            label5 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 128, 0);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(signbtn);
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label6);
-            panel1.Controls.Add(label5);
             panel1.Controls.Add(label1);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(label5);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(305, 425);
             panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.PJ_graphics_logo_2021;
-            pictureBox1.Location = new Point(44, 31);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(217, 213);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
             // 
             // signbtn
             // 
@@ -88,28 +84,6 @@
             signbtn.Text = "SIGN UP";
             signbtn.UseVisualStyleBackColor = false;
             signbtn.Click += signbtn_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Poppins Medium", 12F, FontStyle.Bold);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(44, 279);
-            label6.Name = "label6";
-            label6.Size = new Size(79, 28);
-            label6.TabIndex = 2;
-            label6.Text = "SYSTEM";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Poppins Medium", 12F, FontStyle.Bold);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(44, 260);
-            label5.Name = "label5";
-            label5.Size = new Size(224, 28);
-            label5.TabIndex = 2;
-            label5.Text = "EMPLOYEE MANAGEMENT";
             // 
             // label1
             // 
@@ -208,6 +182,59 @@
             logbtn.Text = "LOGIN";
             logbtn.UseVisualStyleBackColor = false;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.PJ_graphics_logo_2021;
+            pictureBox2.Location = new Point(9, 9);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(30, 29);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 10;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(56, 78);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(182, 167);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 11;
+            pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Poppins Medium", 12F, FontStyle.Bold);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(41, 267);
+            label6.Name = "label6";
+            label6.Size = new Size(79, 28);
+            label6.TabIndex = 7;
+            label6.Text = "SYSTEM";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Poppins Medium", 12F);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(39, 12);
+            label9.Name = "label9";
+            label9.Size = new Size(78, 28);
+            label9.TabIndex = 8;
+            label9.Text = "PRIHUBS";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Poppins Medium", 12F, FontStyle.Bold);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(41, 248);
+            label5.Name = "label5";
+            label5.Size = new Size(224, 28);
+            label5.TabIndex = 9;
+            label5.Text = "EMPLOYEE MANAGEMENT";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 22F);
@@ -230,6 +257,7 @@
             Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -248,8 +276,10 @@
         private Button logbtn;
         private Button signbtn;
         private Label label1;
+        private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Label label6;
+        private Label label9;
         private Label label5;
     }
 }
