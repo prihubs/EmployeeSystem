@@ -31,8 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            pictureBox2 = new PictureBox();
             logbtn = new Button();
             label6 = new Label();
+            label9 = new Label();
             label5 = new Label();
             label1 = new Label();
             signbtn = new Button();
@@ -47,8 +49,6 @@
             cpass = new TextBox();
             label8 = new Label();
             email = new TextBox();
-            pictureBox2 = new PictureBox();
-            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -81,6 +81,16 @@
             panel1.Size = new Size(305, 430);
             panel1.TabIndex = 6;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.PJ_graphics_logo_2021;
+            pictureBox2.Location = new Point(12, 6);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(30, 29);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 6;
+            pictureBox2.TabStop = false;
+            // 
             // logbtn
             // 
             logbtn.BackColor = Color.White;
@@ -109,6 +119,17 @@
             label6.Size = new Size(79, 28);
             label6.TabIndex = 2;
             label6.Text = "SYSTEM";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Poppins Medium", 12F);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(42, 9);
+            label9.Name = "label9";
+            label9.Size = new Size(78, 28);
+            label9.TabIndex = 2;
+            label9.Text = "PRIHUBS";
             // 
             // label5
             // 
@@ -147,6 +168,7 @@
             signbtn.TabIndex = 14;
             signbtn.Text = "SIGNUP";
             signbtn.UseVisualStyleBackColor = false;
+            signbtn.Click += signbtn_click;
             // 
             // showbtn
             // 
@@ -159,12 +181,14 @@
             showbtn.Text = "Show";
             showbtn.TextAlign = ContentAlignment.MiddleCenter;
             showbtn.UseVisualStyleBackColor = true;
+            showbtn.CheckedChanged += showbtn_CheckedChanged;
             // 
             // pass
             // 
             pass.Font = new Font("Poppins Medium", 11F);
             pass.Location = new Point(342, 231);
             pass.Name = "pass";
+            pass.PasswordChar = '*';
             pass.Size = new Size(133, 29);
             pass.TabIndex = 11;
             // 
@@ -233,6 +257,7 @@
             cpass.Font = new Font("Poppins Medium", 11F);
             cpass.Location = new Point(481, 231);
             cpass.Name = "cpass";
+            cpass.PasswordChar = '*';
             cpass.Size = new Size(133, 29);
             cpass.TabIndex = 11;
             // 
@@ -253,27 +278,6 @@
             email.Name = "email";
             email.Size = new Size(133, 29);
             email.TabIndex = 12;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.PJ_graphics_logo_2021;
-            pictureBox2.Location = new Point(12, 6);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 29);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 6;
-            pictureBox2.TabStop = false;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Poppins Medium", 12F);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(42, 9);
-            label9.Name = "label9";
-            label9.Size = new Size(78, 28);
-            label9.TabIndex = 2;
-            label9.Text = "PRIHUBS";
             // 
             // RegisterForm
             // 

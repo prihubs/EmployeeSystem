@@ -18,5 +18,10 @@ namespace EmployeeSystem
             rgf.Show();
             this.Hide();
         }
+
+        private void showbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            pass.PasswordChar = showbtn.Checked ? '\0' : '*';
+        }
     }
 }

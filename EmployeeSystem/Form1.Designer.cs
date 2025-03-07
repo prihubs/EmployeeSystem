@@ -30,8 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            pictureBox2 = new PictureBox();
             signbtn = new Button();
+            pictureBox1 = new PictureBox();
+            label6 = new Label();
             label1 = new Label();
+            label9 = new Label();
+            label5 = new Label();
             closebtn1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -40,11 +45,6 @@
             pass = new TextBox();
             showbtn = new CheckBox();
             logbtn = new Button();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            label6 = new Label();
-            label9 = new Label();
-            label5 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -67,6 +67,16 @@
             panel1.Size = new Size(305, 425);
             panel1.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.PJ_graphics_logo_2021;
+            pictureBox2.Location = new Point(9, 9);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(30, 29);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 10;
+            pictureBox2.TabStop = false;
+            // 
             // signbtn
             // 
             signbtn.BackColor = Color.White;
@@ -85,6 +95,27 @@
             signbtn.UseVisualStyleBackColor = false;
             signbtn.Click += signbtn_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(56, 78);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(182, 167);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 11;
+            pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Poppins Medium", 12F, FontStyle.Bold);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(41, 267);
+            label6.Name = "label6";
+            label6.Size = new Size(79, 28);
+            label6.TabIndex = 7;
+            label6.Text = "SYSTEM";
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -94,6 +125,28 @@
             label1.Size = new Size(151, 22);
             label1.TabIndex = 2;
             label1.Text = "Register A New Account";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Poppins Medium", 12F);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(39, 12);
+            label9.Name = "label9";
+            label9.Size = new Size(78, 28);
+            label9.TabIndex = 8;
+            label9.Text = "PRIHUBS";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Poppins Medium", 12F, FontStyle.Bold);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(41, 248);
+            label5.Name = "label5";
+            label5.Size = new Size(224, 28);
+            label5.TabIndex = 9;
+            label5.Text = "EMPLOYEE MANAGEMENT";
             // 
             // closebtn1
             // 
@@ -150,6 +203,7 @@
             pass.Font = new Font("Poppins Medium", 11F);
             pass.Location = new Point(334, 231);
             pass.Name = "pass";
+            pass.PasswordChar = '*';
             pass.Size = new Size(272, 29);
             pass.TabIndex = 3;
             // 
@@ -164,6 +218,7 @@
             showbtn.Text = "Show";
             showbtn.TextAlign = ContentAlignment.MiddleCenter;
             showbtn.UseVisualStyleBackColor = true;
+            showbtn.CheckedChanged += showbtn_CheckedChanged;
             // 
             // logbtn
             // 
@@ -181,59 +236,6 @@
             logbtn.TabIndex = 5;
             logbtn.Text = "LOGIN";
             logbtn.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.PJ_graphics_logo_2021;
-            pictureBox2.Location = new Point(9, 9);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 29);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 10;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(56, 78);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(182, 167);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Poppins Medium", 12F, FontStyle.Bold);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(41, 267);
-            label6.Name = "label6";
-            label6.Size = new Size(79, 28);
-            label6.TabIndex = 7;
-            label6.Text = "SYSTEM";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Poppins Medium", 12F);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(39, 12);
-            label9.Name = "label9";
-            label9.Size = new Size(78, 28);
-            label9.TabIndex = 8;
-            label9.Text = "PRIHUBS";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Poppins Medium", 12F, FontStyle.Bold);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(41, 248);
-            label5.Name = "label5";
-            label5.Size = new Size(224, 28);
-            label5.TabIndex = 9;
-            label5.Text = "EMPLOYEE MANAGEMENT";
             // 
             // Form1
             // 
