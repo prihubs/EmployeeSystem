@@ -236,6 +236,7 @@
             logbtn.TabIndex = 5;
             logbtn.Text = "LOGIN";
             logbtn.UseVisualStyleBackColor = false;
+            logbtn.Click += logbtnn_click;
             // 
             // Form1
             // 

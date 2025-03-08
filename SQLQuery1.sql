@@ -1,6 +1,6 @@
 ﻿
 
-/* 
+/*
 CREATE TABLE Users
 (
 	Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
@@ -11,10 +11,9 @@ CREATE TABLE Users
 )
 
 
-
-/* 
 Alter Table Users	
 ADD email VARCHAR(MAX) NOT NULL;
+*/
 
-Select * From Users 
-ENDDDD */
+
+SELECT * FROM Users
