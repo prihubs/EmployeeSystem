@@ -34,19 +34,20 @@
             label9 = new Label();
             closebtn1 = new Label();
             panel2 = new Panel();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
             dash = new Button();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             label1 = new Label();
             label5 = new Label();
             panel3 = new Panel();
+            button1 = new Button();
+            button2 = new Button();
+            pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -100,10 +101,10 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(255, 109, 0);
-            panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(dash);
+            panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
@@ -114,75 +115,22 @@
             panel2.Size = new Size(225, 555);
             panel2.TabIndex = 1;
             // 
-            // button3
-            // 
-            button3.BackColor = Color.White;
-            button3.FlatAppearance.BorderColor = Color.White;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Poppins Medium", 11F);
-            button3.ForeColor = Color.FromArgb(255, 128, 0);
-            button3.Location = new Point(9, 317);
-            button3.Name = "button3";
-            button3.Size = new Size(202, 29);
-            button3.TabIndex = 12;
-            button3.Text = "Dashboard";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += dashbtn_click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.White;
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Poppins Medium", 11F);
-            button2.ForeColor = Color.FromArgb(255, 128, 0);
-            button2.Location = new Point(9, 272);
-            button2.Name = "button2";
-            button2.Size = new Size(202, 29);
-            button2.TabIndex = 12;
-            button2.Text = "Dashboard";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += dashbtn_click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.White;
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Poppins Medium", 11F);
-            button1.ForeColor = Color.FromArgb(255, 128, 0);
-            button1.Location = new Point(9, 225);
-            button1.Name = "button1";
-            button1.Size = new Size(202, 29);
-            button1.TabIndex = 12;
-            button1.Text = "Dashboard";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += dashbtn_click;
-            // 
             // dash
             // 
-            dash.BackColor = Color.White;
+            dash.BackColor = Color.Transparent;
+            dash.BackgroundImageLayout = ImageLayout.None;
+            dash.Cursor = Cursors.Hand;
             dash.FlatAppearance.BorderColor = Color.White;
-            dash.FlatAppearance.BorderSize = 0;
             dash.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
             dash.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
             dash.FlatStyle = FlatStyle.Flat;
             dash.Font = new Font("Poppins Medium", 11F);
-            dash.ForeColor = Color.FromArgb(255, 128, 0);
+            dash.ForeColor = Color.White;
             dash.Location = new Point(9, 179);
             dash.Name = "dash";
-            dash.Size = new Size(202, 29);
+            dash.Size = new Size(202, 40);
             dash.TabIndex = 12;
-            dash.Text = "Dashboard";
+            dash.Text = "DASHBOARD";
             dash.UseVisualStyleBackColor = false;
             dash.Click += dashbtn_click;
             // 
@@ -236,6 +184,60 @@
             panel3.Size = new Size(207, 191);
             panel3.TabIndex = 1;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Transparent;
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.White;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Poppins Medium", 11F);
+            button1.ForeColor = Color.White;
+            button1.Image = Properties.Resources.icons8_add_male_user_group_50;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(9, 225);
+            button1.Name = "button1";
+            button1.Size = new Size(202, 40);
+            button1.TabIndex = 12;
+            button1.Text = "    ADD EMPLOYEE";
+            button1.TextAlign = ContentAlignment.MiddleRight;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += dashbtn_click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Transparent;
+            button2.BackgroundImageLayout = ImageLayout.None;
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderColor = Color.White;
+            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Poppins Medium", 11F);
+            button2.ForeColor = Color.White;
+            button2.Image = Properties.Resources.icons8_salary_male_30;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(9, 271);
+            button2.Name = "button2";
+            button2.Size = new Size(202, 40);
+            button2.TabIndex = 12;
+            button2.Text = "SALARY";
+            button2.TextAlign = ContentAlignment.MiddleRight;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += dashbtn_click;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.logout;
+            pictureBox3.Location = new Point(85, 490);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(54, 53);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 14;
+            pictureBox3.TabStop = false;
+            // 
             // mainF
             // 
             AutoScaleDimensions = new SizeF(8F, 22F);
@@ -248,13 +250,14 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "mainF";
-            Text = "mainF";
+            Text = "y";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -271,8 +274,8 @@
         private Label label5;
         private Label label2;
         private Label label1;
-        private Button button3;
         private Button button2;
         private Button button1;
+        private PictureBox pictureBox3;
     }
 }
