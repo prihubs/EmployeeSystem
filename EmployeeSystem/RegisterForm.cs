@@ -13,11 +13,13 @@ namespace EmployeeSystem
 {
     public partial class RegisterForm : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-JI1O5MO;Initial Catalog=EmployeeM1;Persist Security Info=True;User ID=sa;Password=pjpj;Encrypt=True;Trust Server Certificate=True");
+        SqlConnection con;
         private String Query, Query1, ddate = "getDate()", userr, passr, emailr, cpassr;
         public RegisterForm()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            myFunc myFunc = new myFunc();
+            con = myFunc.db();
         }
 
         private void closebtn1_click(object sender, EventArgs e)

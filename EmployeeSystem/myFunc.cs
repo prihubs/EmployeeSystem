@@ -9,21 +9,13 @@ namespace EmployeeSystem
 {
     class myFunc
     {
-        //public __Cons(userr, passr, cpassr, emailr)
-        //{
+        private SqlConnection con = new SqlConnection("Data Source=DESKTOP-JI1O5MO;Initial Catalog=EmployeeM1;Persist Security Info=True;User ID=sa;Password=pjpj;Encrypt=True;Trust Server Certificate=True");
+        //private SqlConnection con = new SqlConnection("");
 
-        //}
-
-        //private SqlCommand select(string Query)
-        //{
-        //    SqlCommand data = new SqlCommand(Query1, con);
-        //    data.Parameters.AddWithValue(userr, user.Text.Trim());
-        //    data.Parameters.AddWithValue(passr, pass.Text.Trim());
-        //    data.Parameters.AddWithValue(cpassr, cpass.Text.Trim());
-        //    data.Parameters.AddWithValue(emailr, email.Text.Trim());
-        //    return data;
-        //}
-
+        public SqlConnection db()
+        {
+            return con;
+        }
     }
 
 

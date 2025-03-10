@@ -6,11 +6,13 @@ namespace EmployeeSystem
     public partial class Form1 : Form
     {
         private string userr, passr, emailr, Query;
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-JI1O5MO;Initial Catalog=EmployeeM1;Persist Security Info=True;User ID=sa;Password=pjpj;Encrypt=True;Trust Server Certificate=True");
+        SqlConnection con;
 
         public Form1()
         {
             InitializeComponent();
+            myFunc myFunc = new myFunc();
+            con = myFunc.db();
         }
 
         private void closebtn1_Click(object sender, EventArgs e)

@@ -34,20 +34,21 @@
             label9 = new Label();
             closebtn1 = new Label();
             panel2 = new Panel();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
             dash = new Button();
             pictureBox1 = new PictureBox();
             label2 = new Label();
+            label3 = new Label();
             label1 = new Label();
             label5 = new Label();
             panel3 = new Panel();
-            button1 = new Button();
-            button2 = new Button();
-            pictureBox3 = new PictureBox();
+            panel4 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -101,12 +102,13 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(255, 109, 0);
+            panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(dash);
-            panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label2);
+            panel2.Controls.Add(label3);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label5);
             panel2.Dock = DockStyle.Left;
@@ -114,6 +116,69 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(225, 555);
             panel2.TabIndex = 1;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Transparent;
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.BorderColor = Color.White;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Poppins Medium", 11F);
+            button3.ForeColor = Color.White;
+            button3.Image = Properties.Resources.Move_Up1;
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(3, 505);
+            button3.Name = "button3";
+            button3.Size = new Size(44, 40);
+            button3.TabIndex = 12;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += dashbtn_click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Transparent;
+            button2.BackgroundImageLayout = ImageLayout.None;
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderColor = Color.White;
+            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Poppins Medium", 11F);
+            button2.ForeColor = Color.White;
+            button2.Image = Properties.Resources.Get_Cash;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(9, 271);
+            button2.Name = "button2";
+            button2.Size = new Size(202, 40);
+            button2.TabIndex = 12;
+            button2.Text = "SALARY";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += dashbtn_click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Transparent;
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.White;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Poppins Medium", 11F);
+            button1.ForeColor = Color.White;
+            button1.Image = Properties.Resources.Add_Male_User_Group;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(9, 225);
+            button1.Name = "button1";
+            button1.Size = new Size(202, 40);
+            button1.TabIndex = 12;
+            button1.Text = "    ADD EMPLOYEE";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += dashbtn_click;
             // 
             // dash
             // 
@@ -126,6 +191,8 @@
             dash.FlatStyle = FlatStyle.Flat;
             dash.Font = new Font("Poppins Medium", 11F);
             dash.ForeColor = Color.White;
+            dash.Image = Properties.Resources.Dashboard_Gauge1;
+            dash.ImageAlign = ContentAlignment.MiddleLeft;
             dash.Location = new Point(9, 179);
             dash.Name = "dash";
             dash.Size = new Size(202, 40);
@@ -154,6 +221,17 @@
             label2.Size = new Size(73, 28);
             label2.TabIndex = 13;
             label2.Text = "SYSTEM";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Poppins Medium", 9F);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(43, 515);
+            label3.Name = "label3";
+            label3.Size = new Size(60, 22);
+            label3.TabIndex = 13;
+            label3.Text = "Sign Out";
             // 
             // label1
             // 
@@ -184,65 +262,20 @@
             panel3.Size = new Size(207, 191);
             panel3.TabIndex = 1;
             // 
-            // button1
+            // panel4
             // 
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Poppins Medium", 11F);
-            button1.ForeColor = Color.White;
-            button1.Image = Properties.Resources.icons8_add_male_user_group_50;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(9, 225);
-            button1.Name = "button1";
-            button1.Size = new Size(202, 40);
-            button1.TabIndex = 12;
-            button1.Text = "    ADD EMPLOYEE";
-            button1.TextAlign = ContentAlignment.MiddleRight;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += dashbtn_click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Poppins Medium", 11F);
-            button2.ForeColor = Color.White;
-            button2.Image = Properties.Resources.icons8_salary_male_30;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(9, 271);
-            button2.Name = "button2";
-            button2.Size = new Size(202, 40);
-            button2.TabIndex = 12;
-            button2.Text = "SALARY";
-            button2.TextAlign = ContentAlignment.MiddleRight;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += dashbtn_click;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.logout;
-            pictureBox3.Location = new Point(85, 490);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(54, 53);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 14;
-            pictureBox3.TabStop = false;
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(225, 45);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(875, 555);
+            panel4.TabIndex = 2;
             // 
             // mainF
             // 
             AutoScaleDimensions = new SizeF(8F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1100, 600);
+            Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -250,6 +283,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "mainF";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "y";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -257,7 +291,6 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -276,6 +309,8 @@
         private Label label1;
         private Button button2;
         private Button button1;
-        private PictureBox pictureBox3;
+        private Button button3;
+        private Label label3;
+        private Panel panel4;
     }
 }
