@@ -10,19 +10,19 @@ namespace EmployeeSystem
 {
     class EmployeeData
     {
-        private int id { set; get;}
-        private string EmpID { set; get;}
-        private string Name { set; get;}
-        private string Gender { set; get;}
-        private string Contact { set; get;}
-        private int Salary { set; get;}
-        private string Position { set; get;}
-        private string Image { set; get;}
-        private string Status { set; get;}
-        private string iDate { set; get;}
-        private string uDate { set; get;}
+        public int id { set; get; }
+        public string Salary { set; get; } 
+        public string EmpID { set; get;}
+        public string Name { set; get;}
+        public string Gender { set; get;}
+        public string Contact { set; get;}
+        public string Position { set; get;}
+        public string Image { set; get;}
+        public string Status { set; get;}
+        public string iDate { set; get;}
+        public string uDate { set; get;}
 
-        private string Query;
+        public string Query;
 
         myFunc func = new myFunc();
         SqlConnection con;
@@ -35,43 +35,44 @@ namespace EmployeeSystem
             {
                 con.Close();
             }
-            else
-            {
-                con.Open();
-            }
         }
 
         public List<EmployeeData> EmpDataa()
         {
+            string queryValue = "NULL";
             List<EmployeeData> listdata = new List<EmployeeData>();
-            Query = "Select * from employees WHERE delete_date IS NULL";
+            Query = " Select * from employees WHERE delete_date IS NULL ; ";
 
             try
-            {
+            { 
                 conn();
 
                 SqlCommand cmd = new SqlCommand(Query, con);
+                con.Open();
                 SqlDataReader rd = cmd.ExecuteReader();
 
                 while (rd.Read())
                 {
                     EmployeeData em = new EmployeeData();
 
+                    em.Salary = rd["salary"].ToString();
+                    em.EmpID = rd["employee_id"].ToString();
+                    em.Name = rd["full_name"].ToString();
+                    em.Gender = rd["gender"].ToString();
+                    em.Contact = rd["contact"].ToString();
+                    em.Image = rd["image"].ToString();
+                    em.Position = rd["position"].ToString();
+                    em.Status = rd["status"].ToString();
+                    em.iDate = rd["insert_date"].ToString();
+                    em.uDate = rd["update_date"].ToString();
                     em.id = (int)rd["id"];
-                    em.EmpID = (string)rd["employee_id"];
-                    em.Name = (string)rd["full_name"];
-                    em.Salary = (int)rd["salary"];
-                    em.Gender = (string)rd["gender"];
-                    em.Image = (string)rd["image"];
-                    em.Position = (string)rd["position"];
-                    em.Status = (string)rd["status"];
-                    em.iDate = (string)rd["insert_date"];
-                    em.uDate = (string)rd["update_date"];
 
                     listdata.Add(em);
                 }
+                con.Close();
 
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show("Could Not Get Employees!: "+ex.Message, "Failed",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -79,5 +80,53 @@ namespace EmployeeSystem
 
            return listdata;
         }
+
+        public List<EmployeeData> EmpDataaS()
+        {
+            string queryValue = "NULL";
+            List<EmployeeData> listdata1 = new List<EmployeeData>();
+            Query = " Select * from employees WHERE delete_date IS NULL ; ";
+
+            try
+            { 
+                conn();
+
+                SqlCommand cmd = new SqlCommand(Query, con);
+                con.Open();
+                SqlDataReader rd1 = cmd.ExecuteReader();
+
+                while (rd1.Read())
+                {
+                    EmployeeData em1 = new EmployeeData();
+
+                    
+                    em1.EmpID = rd1["employee_id"].ToString();
+                    em1.Name = rd1["full_name"].ToString();
+                    em1.Salary = rd1["salary"].ToString();
+                    em1.Gender = rd1["gender"].ToString();
+                    em1.Contact = rd1["contact"].ToString();
+                    em1.Position = rd1["position"].ToString();
+                    em1.Status = rd1["status"].ToString();
+                    em1.iDate = rd1["insert_date"].ToString();
+                    em1.uDate = rd1["update_date"].ToString();
+                    em1.Image = rd1["image"].ToString();
+                    em1.id = (int)rd1["id"];
+
+                    listdata1.Add(em1);
+                    //listdata1.Remove(em1.Image)
+                }
+                con.Close();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Could Not Get Employees!: "+ex.Message, "Failed",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+           return listdata1;
+        }
+
+
     }
 }

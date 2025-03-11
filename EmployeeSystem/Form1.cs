@@ -116,7 +116,7 @@ namespace EmployeeSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Login Failed!: " + ex.Message, "Failed!", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                MessageBox.Show("Login Failed!...: " + ex.Message, "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

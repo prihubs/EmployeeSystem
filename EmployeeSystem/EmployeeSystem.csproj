@@ -6,7 +6,17 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Copyright>Prihubs</Copyright>
+    <Description>Prihubs</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="PJ ICO.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="PJ ICO.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />

@@ -16,7 +16,8 @@ namespace EmployeeSystem
 
         private SqlConnection con;
         myFunc func = new myFunc();
-        private string Query, id, fn, gender, pos, contact, status, image, iDate, uDate, dDate, pic;
+        private string Query, id, fn, gender, pos, contact, status, image, iDate, uDate, dDate = null, pic;
+        private int salary;
 
 
         public Employee()
@@ -36,7 +37,7 @@ namespace EmployeeSystem
 
         private bool Empty()
         {
-            if(string.IsNullOrWhiteSpace(addEmp_id.Text)
+            if (string.IsNullOrWhiteSpace(addEmp_id.Text)
                 || string.IsNullOrWhiteSpace(addEmp_fn.Text)
                 || string.IsNullOrWhiteSpace(addEmp_g.Text)
                 || string.IsNullOrWhiteSpace(addEmp_pos.Text)
@@ -46,7 +47,7 @@ namespace EmployeeSystem
                 //|| addEmp_pic.Image == null
                 )
             {
-                MessageBox.Show("Kindly Fill all Feilds!", "Empty Feild(s)", 
+                MessageBox.Show("Kindly Fill all Feilds!", "Empty Feild(s)",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return true;
             }
@@ -58,28 +59,25 @@ namespace EmployeeSystem
 
         private void conn()
         {
-            if(con.State == ConnectionState.Open)
+            if (con.State == ConnectionState.Open)
             {
                 con.Close();
-            }
-            else
-            {
-                con.Open();
             }
         }
 
         private bool Exist()
         {
-            conn();
 
             Query = "Select Count(*) from employees Where employee_id = @empId";
             SqlCommand cmd = new SqlCommand(Query, con);
+
+
             cmd.Parameters.AddWithValue("@empId", addEmp_id.Text);
             int count = (int)cmd.ExecuteScalar();
 
-            if(count >= 1)
+            if (count >= 1)
             {
-                MessageBox.Show($"Can't Add a User with {addEmp_id.Text} ");
+                MessageBox.Show($"Can't Add a User with {addEmp_id.Text} ", "User Exist", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
             }
             else
@@ -90,14 +88,14 @@ namespace EmployeeSystem
 
         private void process(string fn)
         {
-            MessageBox.Show(fn + " Proccessing your Data!", "Process",
+            MessageBox.Show(fn + " Proccessing your Data...", "Process",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
 
         private void check(string fn)
         {
-            MessageBox.Show(fn + " Verifing your Data!", "Verify",
+            MessageBox.Show(fn + " Verifing your Data...", "Verify",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -111,58 +109,69 @@ namespace EmployeeSystem
             pos = addEmp_pos.Text;
             contact = addEmp_pn.Text;
             status = addEmp_status.Text;
-            //image = addEmp_pic.Text;
-            iDate = "getDate()";
-            uDate = "getDate()";
-            dDate = "";
+            iDate = DateTime.Today.ToShortDateString(); //"getDate()";
+            //iDate = DateTime.Today.ToShortDateString(); //"getDate()";
             image = "Not Set";
+            //image = addEmp_pic.Text;
+            //object dDate = DBNull.Value;
+            //uDate = "getDate()";
+            //salaryy = ;
 
-            Query = "Insert into employees Values(@id, @fn, @gender, @pos, @contact" +
-                ", @status, @image, "+iDate+", "+uDate+", "+dDate+")";
+            Query = $"Insert into employees (employee_id, full_name, gender, position, contact, image, insert_date, status) Values( @id, @fn, @gender, @pos, @contact, @image, @iDate, @status ); ";
 
             try
             {
-                conn();
 
-                SqlCommand cmd = new SqlCommand(Query, con);
+                SqlCommand cmd1 = new SqlCommand(Query, con);
 
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.Parameters.AddWithValue("@fn", fn);
-                cmd.Parameters.AddWithValue("@gender", gender);
-                cmd.Parameters.AddWithValue("@pos", pos);
-                cmd.Parameters.AddWithValue("@contact", contact);
-                cmd.Parameters.AddWithValue("@status", status);
-                cmd.Parameters.AddWithValue("@image", image);
+                cmd1.Parameters.AddWithValue("@id", id);
+                cmd1.Parameters.AddWithValue("@fn", fn);
+                cmd1.Parameters.AddWithValue("@gender", gender);
+                cmd1.Parameters.AddWithValue("@pos", pos);
+                cmd1.Parameters.AddWithValue("@contact", contact);
+                cmd1.Parameters.AddWithValue("@image", image);
+                cmd1.Parameters.AddWithValue("@status", status);
+                cmd1.Parameters.AddWithValue("@iDate", iDate);
+                //cmd1.Parameters.AddWithValue("@salary", salary);
+                //cmd1.Parameters.AddWithValue("@uDate", uDate);
+                //cmd1.Parameters.AddWithValue("@dDate", dDate);
 
-                cmd.ExecuteNonQuery();
+                cmd1.ExecuteNonQuery();
 
                 display();
 
-                MessageBox.Show(fn+" Data Created Successfully!", "Added New Employee Data",
+                MessageBox.Show(fn + " Data Created Successfully!", "Added New Employee Data",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Could not create this data at this time! "+ex.Message, "Error Message",
+                MessageBox.Show("Could not create this data at this time! " + ex.Message, "Error Message",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                con.Close();
             }
-        
+
 
         }
 
         private void addEmp_add_Click(object sender, EventArgs e)
         {
             check(fn);
+            conn();
+            con.Open();
 
             if (!Empty() && !Exist())
             {
-                conn();
+
                 process(fn);
 
                 Insert();
             }
+            con.Close();
+        }
+
+        private void addEmp_reff(object sender, EventArgs e)
+        {
+            display();
         }
     }
 

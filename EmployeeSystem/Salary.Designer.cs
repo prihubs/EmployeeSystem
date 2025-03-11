@@ -29,123 +29,124 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            logbtn = new Button();
-            textBox4 = new TextBox();
+            addSal_clr = new Button();
+            addSal_del = new Button();
+            addSal_up = new Button();
+            addSal_add = new Button();
+            addSal_sal = new TextBox();
             label6 = new Label();
-            textBox3 = new TextBox();
+            addSal_pos = new TextBox();
             label5 = new Label();
-            textBox2 = new TextBox();
+            addSal_fn = new TextBox();
             label4 = new Label();
-            textBox1 = new TextBox();
+            addSal_id = new TextBox();
             label3 = new Label();
             panel2 = new Panel();
             label2 = new Label();
-            dataGridView2 = new DataGridView();
+            addSal_dg = new DataGridView();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)addSal_dg).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ButtonHighlight;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(logbtn);
-            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(addSal_clr);
+            panel1.Controls.Add(addSal_del);
+            panel1.Controls.Add(addSal_up);
+            panel1.Controls.Add(addSal_add);
+            panel1.Controls.Add(addSal_sal);
             panel1.Controls.Add(label6);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(addSal_pos);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(addSal_fn);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(addSal_id);
             panel1.Controls.Add(label3);
             panel1.Location = new Point(15, 14);
             panel1.Name = "panel1";
             panel1.Size = new Size(293, 526);
             panel1.TabIndex = 1;
             // 
-            // button3
+            // addSal_clr
             // 
-            button3.BackColor = Color.FromArgb(192, 192, 0);
-            button3.FlatAppearance.BorderColor = Color.White;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Poppins Medium", 9F);
-            button3.ForeColor = Color.Black;
-            button3.Location = new Point(154, 403);
-            button3.Name = "button3";
-            button3.Size = new Size(100, 42);
-            button3.TabIndex = 7;
-            button3.Text = "CLEAR";
-            button3.UseVisualStyleBackColor = false;
+            addSal_clr.BackColor = Color.FromArgb(192, 192, 0);
+            addSal_clr.FlatAppearance.BorderColor = Color.White;
+            addSal_clr.FlatAppearance.BorderSize = 0;
+            addSal_clr.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            addSal_clr.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            addSal_clr.FlatStyle = FlatStyle.Flat;
+            addSal_clr.Font = new Font("Poppins Medium", 9F);
+            addSal_clr.ForeColor = Color.Black;
+            addSal_clr.Location = new Point(154, 403);
+            addSal_clr.Name = "addSal_clr";
+            addSal_clr.Size = new Size(100, 42);
+            addSal_clr.TabIndex = 7;
+            addSal_clr.Text = "CLEAR";
+            addSal_clr.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // addSal_del
             // 
-            button2.BackColor = Color.FromArgb(192, 0, 0);
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Poppins Medium", 9F);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(33, 403);
-            button2.Name = "button2";
-            button2.Size = new Size(100, 42);
-            button2.TabIndex = 7;
-            button2.Text = "DELETE";
-            button2.UseVisualStyleBackColor = false;
+            addSal_del.BackColor = Color.FromArgb(192, 0, 0);
+            addSal_del.FlatAppearance.BorderColor = Color.White;
+            addSal_del.FlatAppearance.BorderSize = 0;
+            addSal_del.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            addSal_del.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            addSal_del.FlatStyle = FlatStyle.Flat;
+            addSal_del.Font = new Font("Poppins Medium", 9F);
+            addSal_del.ForeColor = Color.White;
+            addSal_del.Location = new Point(33, 403);
+            addSal_del.Name = "addSal_del";
+            addSal_del.Size = new Size(100, 42);
+            addSal_del.TabIndex = 7;
+            addSal_del.Text = "DELETE";
+            addSal_del.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // addSal_up
             // 
-            button1.BackColor = Color.FromArgb(255, 128, 0);
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Poppins Medium", 9F);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(154, 339);
-            button1.Name = "button1";
-            button1.Size = new Size(100, 42);
-            button1.TabIndex = 7;
-            button1.Text = "UPDATE";
-            button1.UseVisualStyleBackColor = false;
+            addSal_up.BackColor = Color.FromArgb(255, 128, 0);
+            addSal_up.FlatAppearance.BorderColor = Color.White;
+            addSal_up.FlatAppearance.BorderSize = 0;
+            addSal_up.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            addSal_up.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            addSal_up.FlatStyle = FlatStyle.Flat;
+            addSal_up.Font = new Font("Poppins Medium", 9F);
+            addSal_up.ForeColor = Color.White;
+            addSal_up.Location = new Point(154, 339);
+            addSal_up.Name = "addSal_up";
+            addSal_up.Size = new Size(100, 42);
+            addSal_up.TabIndex = 7;
+            addSal_up.Text = "UPDATE";
+            addSal_up.UseVisualStyleBackColor = false;
             // 
-            // logbtn
+            // addSal_add
             // 
-            logbtn.BackColor = Color.FromArgb(255, 128, 0);
-            logbtn.FlatAppearance.BorderColor = Color.White;
-            logbtn.FlatAppearance.BorderSize = 0;
-            logbtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
-            logbtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
-            logbtn.FlatStyle = FlatStyle.Flat;
-            logbtn.Font = new Font("Poppins Medium", 9F);
-            logbtn.ForeColor = Color.White;
-            logbtn.Location = new Point(33, 339);
-            logbtn.Name = "logbtn";
-            logbtn.Size = new Size(100, 42);
-            logbtn.TabIndex = 7;
-            logbtn.Text = "ADD";
-            logbtn.UseVisualStyleBackColor = false;
+            addSal_add.BackColor = Color.FromArgb(255, 128, 0);
+            addSal_add.FlatAppearance.BorderColor = Color.White;
+            addSal_add.FlatAppearance.BorderSize = 0;
+            addSal_add.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            addSal_add.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            addSal_add.FlatStyle = FlatStyle.Flat;
+            addSal_add.Font = new Font("Poppins Medium", 9F);
+            addSal_add.ForeColor = Color.White;
+            addSal_add.Location = new Point(33, 339);
+            addSal_add.Name = "addSal_add";
+            addSal_add.Size = new Size(100, 42);
+            addSal_add.TabIndex = 7;
+            addSal_add.Text = "ADD";
+            addSal_add.UseVisualStyleBackColor = false;
+            addSal_add.Click += addSal_add_Click;
             // 
-            // textBox4
+            // addSal_sal
             // 
-            textBox4.Font = new Font("Poppins", 8F);
-            textBox4.Location = new Point(14, 271);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(262, 29);
-            textBox4.TabIndex = 2;
+            addSal_sal.Font = new Font("Poppins", 8F);
+            addSal_sal.Location = new Point(14, 271);
+            addSal_sal.Multiline = true;
+            addSal_sal.Name = "addSal_sal";
+            addSal_sal.Size = new Size(262, 29);
+            addSal_sal.TabIndex = 2;
             // 
             // label6
             // 
@@ -157,14 +158,14 @@
             label6.TabIndex = 0;
             label6.Text = "Salary:";
             // 
-            // textBox3
+            // addSal_pos
             // 
-            textBox3.Font = new Font("Poppins", 8F);
-            textBox3.Location = new Point(14, 202);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(262, 29);
-            textBox3.TabIndex = 2;
+            addSal_pos.Font = new Font("Poppins", 8F);
+            addSal_pos.Location = new Point(14, 202);
+            addSal_pos.Multiline = true;
+            addSal_pos.Name = "addSal_pos";
+            addSal_pos.Size = new Size(262, 29);
+            addSal_pos.TabIndex = 2;
             // 
             // label5
             // 
@@ -176,14 +177,14 @@
             label5.TabIndex = 0;
             label5.Text = "Position:";
             // 
-            // textBox2
+            // addSal_fn
             // 
-            textBox2.Font = new Font("Poppins", 8F);
-            textBox2.Location = new Point(14, 131);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(262, 29);
-            textBox2.TabIndex = 2;
+            addSal_fn.Font = new Font("Poppins", 8F);
+            addSal_fn.Location = new Point(14, 131);
+            addSal_fn.Multiline = true;
+            addSal_fn.Name = "addSal_fn";
+            addSal_fn.Size = new Size(262, 29);
+            addSal_fn.TabIndex = 2;
             // 
             // label4
             // 
@@ -195,14 +196,14 @@
             label4.TabIndex = 0;
             label4.Text = "Full Name:";
             // 
-            // textBox1
+            // addSal_id
             // 
-            textBox1.Font = new Font("Poppins", 8F);
-            textBox1.Location = new Point(14, 65);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(262, 29);
-            textBox1.TabIndex = 2;
+            addSal_id.Font = new Font("Poppins", 8F);
+            addSal_id.Location = new Point(14, 65);
+            addSal_id.Multiline = true;
+            addSal_id.Name = "addSal_id";
+            addSal_id.Size = new Size(262, 29);
+            addSal_id.TabIndex = 2;
             // 
             // label3
             // 
@@ -219,7 +220,7 @@
             panel2.BackColor = SystemColors.ButtonHighlight;
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(label2);
-            panel2.Controls.Add(dataGridView2);
+            panel2.Controls.Add(addSal_dg);
             panel2.Location = new Point(328, 14);
             panel2.Name = "panel2";
             panel2.Size = new Size(531, 526);
@@ -235,13 +236,13 @@
             label2.TabIndex = 0;
             label2.Text = "Employees";
             // 
-            // dataGridView2
+            // addSal_dg
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(15, 46);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(500, 462);
-            dataGridView2.TabIndex = 1;
+            addSal_dg.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            addSal_dg.Location = new Point(15, 46);
+            addSal_dg.Name = "addSal_dg";
+            addSal_dg.Size = new Size(500, 462);
+            addSal_dg.TabIndex = 1;
             // 
             // Salary
             // 
@@ -257,7 +258,7 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)addSal_dg).EndInit();
             ResumeLayout(false);
         }
 
@@ -266,18 +267,18 @@
         private Panel panel1;
         private Panel panel2;
         private Label label2;
-        private DataGridView dataGridView2;
-        private TextBox textBox4;
+        private DataGridView addSal_dg;
+        private TextBox addSal_sal;
         private Label label6;
-        private TextBox textBox3;
+        private TextBox addSal_pos;
         private Label label5;
-        private TextBox textBox2;
+        private TextBox addSal_fn;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox addSal_id;
         private Label label3;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private Button logbtn;
+        private Button addSal_clr;
+        private Button addSal_del;
+        private Button addSal_up;
+        private Button addSal_add;
     }
 }

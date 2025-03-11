@@ -38,7 +38,9 @@
             addEmp_clear = new Button();
             addEmp_update = new Button();
             addEmp_add = new Button();
+            addEmp_status = new ComboBox();
             addEmp_pos = new ComboBox();
+            label7 = new Label();
             addEmp_g = new ComboBox();
             label6 = new Label();
             addEmp_pn = new TextBox();
@@ -48,8 +50,7 @@
             label3 = new Label();
             addEmp_id = new TextBox();
             label2 = new Label();
-            label7 = new Label();
-            addEmp_status = new ComboBox();
+            addEmp_ref = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)addEmp_dg).BeginInit();
             panel2.SuspendLayout();
@@ -94,6 +95,7 @@
             panel2.Controls.Add(addEmp_delete);
             panel2.Controls.Add(addEmp_clear);
             panel2.Controls.Add(addEmp_update);
+            panel2.Controls.Add(addEmp_ref);
             panel2.Controls.Add(addEmp_add);
             panel2.Controls.Add(addEmp_status);
             panel2.Controls.Add(addEmp_pos);
@@ -208,6 +210,17 @@
             addEmp_add.UseVisualStyleBackColor = false;
             addEmp_add.Click += addEmp_add_Click;
             // 
+            // addEmp_status
+            // 
+            addEmp_status.BackColor = Color.White;
+            addEmp_status.Font = new Font("Poppins", 8F);
+            addEmp_status.FormattingEnabled = true;
+            addEmp_status.Items.AddRange(new object[] { "Active", "Inactive" });
+            addEmp_status.Location = new Point(461, 98);
+            addEmp_status.Name = "addEmp_status";
+            addEmp_status.Size = new Size(195, 27);
+            addEmp_status.TabIndex = 2;
+            // 
             // addEmp_pos
             // 
             addEmp_pos.BackColor = Color.White;
@@ -218,6 +231,16 @@
             addEmp_pos.Name = "addEmp_pos";
             addEmp_pos.Size = new Size(195, 27);
             addEmp_pos.TabIndex = 2;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Poppins", 9F);
+            label7.Location = new Point(399, 101);
+            label7.Name = "label7";
+            label7.Size = new Size(50, 22);
+            label7.TabIndex = 0;
+            label7.Text = "Status:";
             // 
             // addEmp_g
             // 
@@ -307,26 +330,23 @@
             label2.TabIndex = 0;
             label2.Text = "Employee's ID:";
             // 
-            // label7
+            // addEmp_ref
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Poppins", 9F);
-            label7.Location = new Point(399, 101);
-            label7.Name = "label7";
-            label7.Size = new Size(50, 22);
-            label7.TabIndex = 0;
-            label7.Text = "Status:";
-            // 
-            // addEmp_status
-            // 
-            addEmp_status.BackColor = Color.White;
-            addEmp_status.Font = new Font("Poppins", 8F);
-            addEmp_status.FormattingEnabled = true;
-            addEmp_status.Items.AddRange(new object[] { "Active", "Inactive" });
-            addEmp_status.Location = new Point(461, 98);
-            addEmp_status.Name = "addEmp_status";
-            addEmp_status.Size = new Size(195, 27);
-            addEmp_status.TabIndex = 2;
+            addEmp_ref.BackColor = Color.FromArgb(255, 128, 0);
+            addEmp_ref.FlatAppearance.BorderColor = Color.White;
+            addEmp_ref.FlatAppearance.BorderSize = 0;
+            addEmp_ref.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            addEmp_ref.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            addEmp_ref.FlatStyle = FlatStyle.Flat;
+            addEmp_ref.Font = new Font("Poppins Medium", 9F);
+            addEmp_ref.ForeColor = Color.White;
+            addEmp_ref.Location = new Point(74, 165);
+            addEmp_ref.Name = "addEmp_ref";
+            addEmp_ref.Size = new Size(83, 30);
+            addEmp_ref.TabIndex = 6;
+            addEmp_ref.Text = "REFRESH";
+            addEmp_ref.UseVisualStyleBackColor = false;
+            addEmp_ref.Click += this.addEmp_reff;
             // 
             // Employee
             // 
@@ -371,5 +391,6 @@
         private Button addEmp_add;
         private ComboBox addEmp_status;
         private Label label7;
+        private Button addEmp_ref;
     }
 }
