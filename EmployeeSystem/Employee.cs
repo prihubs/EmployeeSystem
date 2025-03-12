@@ -173,6 +173,18 @@ namespace EmployeeSystem
         {
             display();
         }
+
+        private void addEmp_clrr(object sender, EventArgs e)
+        {
+            addEmp_id.Clear();
+            addEmp_fn.Clear();
+            addEmp_pn.Clear();
+            addEmp_pos.Text = null;
+            addEmp_g.Text = null;
+            addEmp_status.Text = null;
+            addEmp_pic = null;
+            
+        }
     }
 
 }

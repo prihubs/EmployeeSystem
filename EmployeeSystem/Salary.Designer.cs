@@ -32,6 +32,7 @@
             addSal_clr = new Button();
             addSal_del = new Button();
             addSal_up = new Button();
+            refreshb = new Button();
             addSal_add = new Button();
             addSal_sal = new TextBox();
             label6 = new Label();
@@ -56,6 +57,7 @@
             panel1.Controls.Add(addSal_clr);
             panel1.Controls.Add(addSal_del);
             panel1.Controls.Add(addSal_up);
+            panel1.Controls.Add(refreshb);
             panel1.Controls.Add(addSal_add);
             panel1.Controls.Add(addSal_sal);
             panel1.Controls.Add(label6);
@@ -86,6 +88,7 @@
             addSal_clr.TabIndex = 7;
             addSal_clr.Text = "CLEAR";
             addSal_clr.UseVisualStyleBackColor = false;
+            addSal_clr.Click += addSal_clrr;
             // 
             // addSal_del
             // 
@@ -97,12 +100,13 @@
             addSal_del.FlatStyle = FlatStyle.Flat;
             addSal_del.Font = new Font("Poppins Medium", 9F);
             addSal_del.ForeColor = Color.White;
-            addSal_del.Location = new Point(33, 403);
+            addSal_del.Location = new Point(33, 466);
             addSal_del.Name = "addSal_del";
             addSal_del.Size = new Size(100, 42);
             addSal_del.TabIndex = 7;
             addSal_del.Text = "DELETE";
             addSal_del.UseVisualStyleBackColor = false;
+            addSal_del.Visible = false;
             // 
             // addSal_up
             // 
@@ -120,6 +124,25 @@
             addSal_up.TabIndex = 7;
             addSal_up.Text = "UPDATE";
             addSal_up.UseVisualStyleBackColor = false;
+            addSal_up.Click += addSal_add_Click;
+            // 
+            // refreshb
+            // 
+            refreshb.BackColor = Color.FromArgb(192, 64, 0);
+            refreshb.FlatAppearance.BorderColor = Color.White;
+            refreshb.FlatAppearance.BorderSize = 0;
+            refreshb.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            refreshb.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            refreshb.FlatStyle = FlatStyle.Flat;
+            refreshb.Font = new Font("Poppins Medium", 9F);
+            refreshb.ForeColor = Color.White;
+            refreshb.Location = new Point(33, 403);
+            refreshb.Name = "refreshb";
+            refreshb.Size = new Size(100, 42);
+            refreshb.TabIndex = 7;
+            refreshb.Text = "REFRESH";
+            refreshb.UseVisualStyleBackColor = false;
+            refreshb.Click += addSal_reff;
             // 
             // addSal_add
             // 
@@ -280,5 +303,6 @@
         private Button addSal_del;
         private Button addSal_up;
         private Button addSal_add;
+        private Button refreshb;
     }
 }

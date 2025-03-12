@@ -8,6 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Copyright>Prihubs</Copyright>
     <Description>Prihubs</Description>
+    <ApplicationIcon>PJ ICO.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>

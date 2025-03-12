@@ -66,9 +66,14 @@ CREATE TABLE employees
 	status varchar(max) null
 )
 
+ALTER TABLE employees
+ALTER COLUMN insert_date VARCHAR(20) NULL
 
 
 Select * From employees
 */
+
+
+select * from employees
 
 

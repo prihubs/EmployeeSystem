@@ -14,9 +14,9 @@ namespace EmployeeSystem
     public partial class Salary : UserControl
     {
 
-        string fn, salary, pos, ids, Query, uDate ;
+        string fn, salary, pos, ids, Query, uDate;
         int idi, salary2;
-        SqlConnection con; 
+        SqlConnection con;
         myFunc func = new myFunc();
 
         public Salary()
@@ -45,7 +45,7 @@ namespace EmployeeSystem
 
         private bool Empty(string fn, string pos, string salary, string ids)
         {
-            if  (
+            if (
                    string.IsNullOrWhiteSpace(fn)
                 || string.IsNullOrWhiteSpace(ids)
                 || string.IsNullOrWhiteSpace(pos)
@@ -65,8 +65,8 @@ namespace EmployeeSystem
         private bool ValidSal(string ids, string salary)
         {
             if (
-                int.TryParse(ids, out int idd)
-                && int.TryParse(salary, out int salaryy)
+                !int.TryParse(ids, out int idd)
+                || !int.TryParse(salary, out int salaryy)
                 )
             {
                 MessageBox.Show("Invalid ID or SALARY", "Invalid Entries",
@@ -92,20 +92,20 @@ namespace EmployeeSystem
             int count = (int)cmd.ExecuteScalar();
 
             if (count < 1)
-             {
-               MessageBox.Show("Employee Data(s) do not match!", "Data MisMatch",
-               MessageBoxButtons.OK, MessageBoxIcon.Error);
-               conn();
-               return false;
+            {
+                MessageBox.Show("Employee Data(s) do not match!", "Data MisMatch",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn();
+                return false;
 
-             }
+            }
             else
-             {
+            {
                 conn();
                 MessageBox.Show("Found!.........", "Data Found!",
                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
-             }
+            }
             conn();
 
         }
@@ -136,7 +136,7 @@ namespace EmployeeSystem
 
         private void addSal_add_Click(object sender, EventArgs e)
         {
-            
+
             //int.TryParse(addSal_id.Text, out int idd);
             fn = addSal_fn.Text;
             pos = addSal_fn.Text;
@@ -161,11 +161,23 @@ namespace EmployeeSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show(fn+" Salary was not Updated: " + ex.Message, "Not Updated!",
+                MessageBox.Show(fn + " Salary was not Updated: " + ex.Message, "Not Updated!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
+        private void addSal_reff(object sender, EventArgs e)
+        {
+            display();
+        }
+
+        private void addSal_clrr(object sender, EventArgs e)
+        {
+            addSal_fn.Clear();
+            addSal_fn.Clear();
+            addSal_sal.Clear();
+            addSal_id.Clear();
+        }
     }
 }
