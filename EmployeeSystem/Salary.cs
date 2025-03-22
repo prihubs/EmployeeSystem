@@ -30,6 +30,14 @@ namespace EmployeeSystem
         private void display()
         {
             EmployeeData ed = new EmployeeData();
+            ed.getDatas(addSal_dg);
+            addSal_dg.Columns["image"].Visible = false;
+            //addEmp_dg.DataSource = list;
+            //addEmp_dg.Columns.Add("Photo", typeof(byte[]));
+        }
+        private void displayt()
+        {
+            EmployeeData ed = new EmployeeData();
             List<EmployeeData> list = ed.EmpDataaS();
             addSal_dg.DataSource = list;
             conn();

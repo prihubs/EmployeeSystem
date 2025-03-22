@@ -31,8 +31,18 @@ namespace EmployeeSystem
         private void display()
         {
             EmployeeData ed = new EmployeeData();
+            ed.getDatas(addEmp_dg);
+            addEmp_dg.Columns["image"].Visible = false;
+
+            //addEmp_dg.DataSource = list;
+            //addEmp_dg.Columns.Add("Photo", typeof(byte[]));
+        }
+        private void displayt()
+        {
+            EmployeeData ed = new EmployeeData();
             List<EmployeeData> list = ed.EmpDataa();
             addEmp_dg.DataSource = list;
+            //addEmp_dg.Columns.Add("Photo", typeof(byte[]));
         }
 
         private bool Empty()
@@ -111,7 +121,7 @@ namespace EmployeeSystem
             status = addEmp_status.Text;
             iDate = DateTime.Today.ToShortDateString(); //"getDate()";
             //iDate = DateTime.Today.ToShortDateString(); //"getDate()";
-            image = "Not Set";
+            //image = immm;
             //image = addEmp_pic.Text;
             //object dDate = DBNull.Value;
             //uDate = "getDate()";
@@ -129,7 +139,7 @@ namespace EmployeeSystem
                 cmd1.Parameters.AddWithValue("@gender", gender);
                 cmd1.Parameters.AddWithValue("@pos", pos);
                 cmd1.Parameters.AddWithValue("@contact", contact);
-                cmd1.Parameters.AddWithValue("@image", image);
+                cmd1.Parameters.AddWithValue("@image", setImage());
                 cmd1.Parameters.AddWithValue("@status", status);
                 cmd1.Parameters.AddWithValue("@iDate", iDate);
                 //cmd1.Parameters.AddWithValue("@salary", salary);
@@ -183,7 +193,67 @@ namespace EmployeeSystem
             addEmp_g.Text = null;
             addEmp_status.Text = null;
             addEmp_pic = null;
-            
+
+        }
+
+
+        private byte[] setImage()
+        {
+            byte[] imagePic = getImageByte(addEmp_pic.Image);
+            return imagePic;
+        }
+
+        private void addEmp_apbc(object sender, EventArgs e)
+        {
+            OpenFileDialog fd = new OpenFileDialog();
+            fd.Filter = "Image Files|*.jpg;*.jpeg;*.png;";
+
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                addEmp_pic.Image = Image.FromFile(fd.FileName);
+            }
+        }
+
+        private byte[] getImageByte(Image PIC)
+        {
+            MemoryStream ms = new MemoryStream();
+            PIC.Save(ms, PIC.RawFormat);
+            return ms.ToArray();
+        }
+
+
+        private void upbtn(object sender, EventArgs e)
+        {
+            OpenFileDialog fd = new OpenFileDialog();
+            fd.Filter = "Image Files|*.jpg;*.png;*.jpeg;";
+
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                addEmp_pic.Image = Image.FromFile(fd.FileName);
+            }
+        }
+
+        private byte[] getIt(Image data)
+        {
+            MemoryStream mss = new MemoryStream();
+            data.Save(mss, data.RawFormat);
+            return mss.ToArray();
+        }
+
+        private void fimg(object sender, EventArgs e)
+        {
+            //bring();
+        }
+
+        private void sdb()
+        {
+            //Query = "Select * From employees Where"
+        }
+
+        private Image cImage(byte[] data)
+        {
+            MemoryStream ms = new MemoryStream(data);
+            return Image.FromStream(ms);
         }
     }
 

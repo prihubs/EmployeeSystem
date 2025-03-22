@@ -36,8 +36,6 @@
             addSal_add = new Button();
             addSal_sal = new TextBox();
             label6 = new Label();
-            addSal_pos = new TextBox();
-            label5 = new Label();
             addSal_fn = new TextBox();
             label4 = new Label();
             addSal_id = new TextBox();
@@ -61,8 +59,6 @@
             panel1.Controls.Add(addSal_add);
             panel1.Controls.Add(addSal_sal);
             panel1.Controls.Add(label6);
-            panel1.Controls.Add(addSal_pos);
-            panel1.Controls.Add(label5);
             panel1.Controls.Add(addSal_fn);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(addSal_id);
@@ -82,7 +78,7 @@
             addSal_clr.FlatStyle = FlatStyle.Flat;
             addSal_clr.Font = new Font("Poppins Medium", 9F);
             addSal_clr.ForeColor = Color.Black;
-            addSal_clr.Location = new Point(154, 403);
+            addSal_clr.Location = new Point(154, 366);
             addSal_clr.Name = "addSal_clr";
             addSal_clr.Size = new Size(100, 42);
             addSal_clr.TabIndex = 7;
@@ -100,7 +96,7 @@
             addSal_del.FlatStyle = FlatStyle.Flat;
             addSal_del.Font = new Font("Poppins Medium", 9F);
             addSal_del.ForeColor = Color.White;
-            addSal_del.Location = new Point(33, 466);
+            addSal_del.Location = new Point(33, 429);
             addSal_del.Name = "addSal_del";
             addSal_del.Size = new Size(100, 42);
             addSal_del.TabIndex = 7;
@@ -118,7 +114,7 @@
             addSal_up.FlatStyle = FlatStyle.Flat;
             addSal_up.Font = new Font("Poppins Medium", 9F);
             addSal_up.ForeColor = Color.White;
-            addSal_up.Location = new Point(154, 339);
+            addSal_up.Location = new Point(154, 302);
             addSal_up.Name = "addSal_up";
             addSal_up.Size = new Size(100, 42);
             addSal_up.TabIndex = 7;
@@ -136,7 +132,7 @@
             refreshb.FlatStyle = FlatStyle.Flat;
             refreshb.Font = new Font("Poppins Medium", 9F);
             refreshb.ForeColor = Color.White;
-            refreshb.Location = new Point(33, 403);
+            refreshb.Location = new Point(33, 366);
             refreshb.Name = "refreshb";
             refreshb.Size = new Size(100, 42);
             refreshb.TabIndex = 7;
@@ -154,7 +150,7 @@
             addSal_add.FlatStyle = FlatStyle.Flat;
             addSal_add.Font = new Font("Poppins Medium", 9F);
             addSal_add.ForeColor = Color.White;
-            addSal_add.Location = new Point(33, 339);
+            addSal_add.Location = new Point(33, 302);
             addSal_add.Name = "addSal_add";
             addSal_add.Size = new Size(100, 42);
             addSal_add.TabIndex = 7;
@@ -165,7 +161,7 @@
             // addSal_sal
             // 
             addSal_sal.Font = new Font("Poppins", 8F);
-            addSal_sal.Location = new Point(14, 271);
+            addSal_sal.Location = new Point(14, 201);
             addSal_sal.Multiline = true;
             addSal_sal.Name = "addSal_sal";
             addSal_sal.Size = new Size(262, 29);
@@ -175,30 +171,11 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Poppins Medium", 8F);
-            label6.Location = new Point(14, 252);
+            label6.Location = new Point(14, 182);
             label6.Name = "label6";
             label6.Size = new Size(46, 19);
             label6.TabIndex = 0;
             label6.Text = "Salary:";
-            // 
-            // addSal_pos
-            // 
-            addSal_pos.Font = new Font("Poppins", 8F);
-            addSal_pos.Location = new Point(14, 202);
-            addSal_pos.Multiline = true;
-            addSal_pos.Name = "addSal_pos";
-            addSal_pos.Size = new Size(262, 29);
-            addSal_pos.TabIndex = 2;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Poppins Medium", 8F);
-            label5.Location = new Point(14, 183);
-            label5.Name = "label5";
-            label5.Size = new Size(56, 19);
-            label5.TabIndex = 0;
-            label5.Text = "Position:";
             // 
             // addSal_fn
             // 
@@ -293,8 +270,6 @@
         private DataGridView addSal_dg;
         private TextBox addSal_sal;
         private Label label6;
-        private TextBox addSal_pos;
-        private Label label5;
         private TextBox addSal_fn;
         private Label label4;
         private TextBox addSal_id;

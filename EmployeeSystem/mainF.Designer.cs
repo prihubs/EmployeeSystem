@@ -28,13 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainF));
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
+            diff = new Label();
+            label1 = new Label();
+            tmb1 = new Label();
             label9 = new Label();
             closebtn1 = new Label();
             panel2 = new Panel();
             logoutt_btn = new Button();
+            button1 = new Button();
             salary_btn = new Button();
             addEm_btn = new Button();
             dash_btn = new Button();
@@ -43,9 +48,11 @@
             greet_user = new Label();
             panel3 = new Panel();
             panel4 = new Panel();
+            uDetails1 = new uDetails();
             control11 = new Control1();
             employee1 = new Employee();
             salary1 = new Salary();
+            tm2 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
@@ -57,6 +64,9 @@
             // 
             panel1.BackColor = Color.FromArgb(255, 128, 0);
             panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(diff);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(tmb1);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(closebtn1);
             panel1.Dock = DockStyle.Top;
@@ -74,6 +84,39 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 13;
             pictureBox2.TabStop = false;
+            // 
+            // diff
+            // 
+            diff.AutoSize = true;
+            diff.Font = new Font("Poppins Medium", 12F);
+            diff.ForeColor = Color.White;
+            diff.Location = new Point(398, 9);
+            diff.Name = "diff";
+            diff.Size = new Size(21, 28);
+            diff.TabIndex = 12;
+            diff.Text = "| ";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Poppins Medium", 12F);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(177, 8);
+            label1.Name = "label1";
+            label1.Size = new Size(224, 28);
+            label1.TabIndex = 12;
+            label1.Text = "You have been ONLINE for: ";
+            // 
+            // tmb1
+            // 
+            tmb1.AutoSize = true;
+            tmb1.Font = new Font("Poppins Medium", 12F);
+            tmb1.ForeColor = Color.White;
+            tmb1.Location = new Point(660, 9);
+            tmb1.Name = "tmb1";
+            tmb1.Size = new Size(21, 28);
+            tmb1.TabIndex = 12;
+            tmb1.Text = "| ";
             // 
             // label9
             // 
@@ -105,6 +148,7 @@
             // 
             panel2.BackColor = Color.FromArgb(255, 109, 0);
             panel2.Controls.Add(logoutt_btn);
+            panel2.Controls.Add(button1);
             panel2.Controls.Add(salary_btn);
             panel2.Controls.Add(addEm_btn);
             panel2.Controls.Add(dash_btn);
@@ -137,6 +181,27 @@
             logoutt_btn.TabIndex = 12;
             logoutt_btn.UseVisualStyleBackColor = false;
             logoutt_btn.Click += logout_btn;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Transparent;
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.White;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Poppins Medium", 11F);
+            button1.ForeColor = Color.White;
+            button1.Image = Properties.Resources.Get_Cash;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(9, 317);
+            button1.Name = "button1";
+            button1.Size = new Size(202, 40);
+            button1.TabIndex = 12;
+            button1.Text = "View Employee";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += viewEmpb;
             // 
             // salary_btn
             // 
@@ -245,11 +310,21 @@
             panel4.Controls.Add(control11);
             panel4.Controls.Add(employee1);
             panel4.Controls.Add(salary1);
+            panel4.Controls.Add(uDetails1);
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(225, 45);
             panel4.Name = "panel4";
             panel4.Size = new Size(875, 555);
             panel4.TabIndex = 2;
+            // 
+            // uDetails1
+            // 
+            uDetails1.Font = new Font("Poppins Medium", 9F);
+            uDetails1.Location = new Point(0, -1);
+            uDetails1.Margin = new Padding(3, 4, 3, 4);
+            uDetails1.Name = "uDetails1";
+            uDetails1.Size = new Size(875, 555);
+            uDetails1.TabIndex = 15;
             // 
             // control11
             // 
@@ -277,6 +352,11 @@
             salary1.Name = "salary1";
             salary1.Size = new Size(875, 555);
             salary1.TabIndex = 0;
+            // 
+            // tm2
+            // 
+            tm2.Enabled = true;
+            tm2.Tick += tm2_Tick;
             // 
             // mainF
             // 
@@ -322,5 +402,11 @@
         private Control1 control11;
         private Employee employee1;
         private Salary salary1;
+        private Label tmb1;
+        private System.Windows.Forms.Timer tm2;
+        private Label diff;
+        private Label label1;
+        private Button button1;
+        private uDetails uDetails1;
     }
 }

@@ -118,37 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Move Up1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Move Up1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Add Male User Group" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add Male User Group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Member inac1 60" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Member inac1 60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Get Cash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Get Cash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-add-male-user-group-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icons8-add-male-user-group-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dashboard Gauge1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard Gauge1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PJ graphics logo 2021" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PJ graphics logo 2021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Get Cash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Get Cash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="grouping" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grouping.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-salary-male-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\icons8-salary-male-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Conference1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conference1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add Male User Group" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add Male User Group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Move Up1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Move Up1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Identification Documents1 60" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Identification Documents1 60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Member inac1 60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Member inac1 60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PJ graphics logo 2021" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PJ graphics logo 2021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-add-male-user-group-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icons8-add-male-user-group-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-salary-male-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icons8-salary-male-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Member 2 60" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Member 2 60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

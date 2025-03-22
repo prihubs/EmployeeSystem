@@ -11,7 +11,9 @@ namespace EmployeeSystem
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            //Application.Run(new DTime());
+            Application.Run(new mainF());
+            //Application.Run(new Form2());
         }
     }
 }

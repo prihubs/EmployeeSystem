@@ -32,7 +32,7 @@
             addEmp_dg = new DataGridView();
             label1 = new Label();
             panel2 = new Panel();
-            addEmp_pic_btn = new Button();
+            addEmp_apb = new Button();
             addEmp_pic = new PictureBox();
             addEmp_delete = new Button();
             addEmp_clear = new Button();
@@ -51,6 +51,7 @@
             label3 = new Label();
             addEmp_id = new TextBox();
             label2 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)addEmp_dg).BeginInit();
             panel2.SuspendLayout();
@@ -90,7 +91,7 @@
             // 
             panel2.BackColor = SystemColors.ButtonHighlight;
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(addEmp_pic_btn);
+            panel2.Controls.Add(addEmp_apb);
             panel2.Controls.Add(addEmp_pic);
             panel2.Controls.Add(addEmp_delete);
             panel2.Controls.Add(addEmp_clear);
@@ -114,30 +115,33 @@
             panel2.Size = new Size(827, 209);
             panel2.TabIndex = 0;
             // 
-            // addEmp_pic_btn
+            // addEmp_apb
             // 
-            addEmp_pic_btn.BackColor = Color.FromArgb(255, 128, 0);
-            addEmp_pic_btn.FlatAppearance.BorderColor = Color.White;
-            addEmp_pic_btn.FlatAppearance.BorderSize = 0;
-            addEmp_pic_btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
-            addEmp_pic_btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
-            addEmp_pic_btn.FlatStyle = FlatStyle.Flat;
-            addEmp_pic_btn.Font = new Font("Poppins Medium", 9F);
-            addEmp_pic_btn.ForeColor = Color.White;
-            addEmp_pic_btn.Location = new Point(673, 156);
-            addEmp_pic_btn.Name = "addEmp_pic_btn";
-            addEmp_pic_btn.Size = new Size(137, 30);
-            addEmp_pic_btn.TabIndex = 6;
-            addEmp_pic_btn.Text = "IMPORT";
-            addEmp_pic_btn.UseVisualStyleBackColor = false;
+            addEmp_apb.BackColor = Color.FromArgb(255, 128, 0);
+            addEmp_apb.FlatAppearance.BorderColor = Color.White;
+            addEmp_apb.FlatAppearance.BorderSize = 0;
+            addEmp_apb.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            addEmp_apb.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            addEmp_apb.FlatStyle = FlatStyle.Flat;
+            addEmp_apb.Font = new Font("Poppins Medium", 9F);
+            addEmp_apb.ForeColor = Color.White;
+            addEmp_apb.Location = new Point(673, 156);
+            addEmp_apb.Name = "addEmp_apb";
+            addEmp_apb.Size = new Size(137, 30);
+            addEmp_apb.TabIndex = 6;
+            addEmp_apb.Text = "IMPORT";
+            addEmp_apb.UseVisualStyleBackColor = false;
+            addEmp_apb.Click += addEmp_apbc;
             // 
             // addEmp_pic
             // 
             addEmp_pic.BackColor = SystemColors.ButtonShadow;
             addEmp_pic.BorderStyle = BorderStyle.FixedSingle;
+            addEmp_pic.Image = Properties.Resources.avatar;
             addEmp_pic.Location = new Point(673, 20);
             addEmp_pic.Name = "addEmp_pic";
             addEmp_pic.Size = new Size(137, 142);
+            addEmp_pic.SizeMode = PictureBoxSizeMode.Zoom;
             addEmp_pic.TabIndex = 7;
             addEmp_pic.TabStop = false;
             // 
@@ -349,10 +353,29 @@
             label2.TabIndex = 0;
             label2.Text = "Employee's ID:";
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(255, 128, 0);
+            button1.FlatAppearance.BorderColor = Color.White;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 64, 0);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 64, 0);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Poppins Medium", 9F);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(697, 289);
+            button1.Name = "button1";
+            button1.Size = new Size(137, 30);
+            button1.TabIndex = 6;
+            button1.Text = "IMPORT22";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += upbtn;
+            // 
             // Employee
             // 
             AutoScaleDimensions = new SizeF(10F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -384,7 +407,7 @@
         private Label label5;
         private TextBox addEmp_fn;
         private Label label3;
-        private Button addEmp_pic_btn;
+        private Button addEmp_apb;
         private PictureBox addEmp_pic;
         private Button addEmp_delete;
         private Button addEmp_clear;
@@ -393,5 +416,6 @@
         private ComboBox addEmp_status;
         private Label label7;
         private Button addEmp_ref;
+        private Button button1;
     }
 }

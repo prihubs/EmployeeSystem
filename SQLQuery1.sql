@@ -71,9 +71,12 @@ ALTER COLUMN insert_date VARCHAR(20) NULL
 
 
 Select * From employees
+Update employees Set image 
 */
 
 
 select * from employees
 
+Alter Table employees
+Alter column image nvarchar(max) not null
 

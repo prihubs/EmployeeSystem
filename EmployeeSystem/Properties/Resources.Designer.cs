@@ -73,6 +73,26 @@ namespace EmployeeSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap avatar {
+            get {
+                object obj = ResourceManager.GetObject("avatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conference1 {
+            get {
+                object obj = ResourceManager.GetObject("Conference1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dashboard_Gauge1 {
             get {
                 object obj = ResourceManager.GetObject("Dashboard Gauge1", resourceCulture);
@@ -86,6 +106,16 @@ namespace EmployeeSystem.Properties {
         internal static System.Drawing.Bitmap Get_Cash {
             get {
                 object obj = ResourceManager.GetObject("Get Cash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grouping {
+            get {
+                object obj = ResourceManager.GetObject("grouping", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

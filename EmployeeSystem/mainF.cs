@@ -40,12 +40,14 @@ namespace EmployeeSystem
         {
             control11.Visible = true;
             employee1.Visible = false;
+            uDetails1.Visible = false;
             salary1.Visible = false;
         }
 
         private void addEmpP_click(object sender, EventArgs e)
         {
             control11.Visible = false;
+            uDetails1.Visible = false;
             employee1.Visible = true;
             salary1.Visible = false;
         }
@@ -54,8 +56,31 @@ namespace EmployeeSystem
         {
             control11.Visible = false;
             employee1.Visible = false;
+            employee1.Visible = false;
             salary1.Visible = true;
         }
 
+        private void tm2_Tick(object sender, EventArgs e)
+        {
+            //tm2.Enabled = false;
+            //DateTime dtt = DateTime.Now;
+            //diff.Text += dtt.ToString();
+
+            //tm2.Enabled = true;
+
+            DateTime dt = DateTime.Now;
+            tmb1.Text = dt.ToString();
+            tm2.Start();
+        }
+
+        private void viewEmpb(object sender, EventArgs e)
+        {
+            //uDetails ud = new uDetails();
+            uDetails1.Visible = true;
+            control11.Visible = false;
+            employee1.Visible = false;
+            salary1.Visible = false;
+            //ud.Visible = true;
+        }
     }
 }

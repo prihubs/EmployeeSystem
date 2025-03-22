@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
+using System.IO;
 using System.Data;
 using Microsoft.Data.SqlClient;
 
@@ -17,7 +19,7 @@ namespace EmployeeSystem
         public string Gender { set; get;}
         public string Contact { set; get;}
         public string Position { set; get;}
-        public string Image { set; get;}
+        public Image Photo { set; get;}
         public string Status { set; get;}
         public string iDate { set; get;}
         public string uDate { set; get;}
@@ -55,12 +57,19 @@ namespace EmployeeSystem
                 {
                     EmployeeData em = new EmployeeData();
 
+                    //string imggg = rd["image"].ToString();
+
                     em.Salary = rd["salary"].ToString();
                     em.EmpID = rd["employee_id"].ToString();
                     em.Name = rd["full_name"].ToString();
                     em.Gender = rd["gender"].ToString();
                     em.Contact = rd["contact"].ToString();
-                    em.Image = rd["image"].ToString();
+
+                    if (rd["image"] != DBNull.Value)
+                    em.Photo = cImage((byte[])rd["image"]);
+                    else
+                    em.Photo = null;
+
                     em.Position = rd["position"].ToString();
                     em.Status = rd["status"].ToString();
                     em.iDate = rd["insert_date"].ToString();
@@ -80,6 +89,39 @@ namespace EmployeeSystem
 
            return listdata;
         }
+
+        public void getDatas(DataGridView data)
+        {
+            Query = "Select * From employees Where delete_date is Null";
+            conn();
+            con.Open(); 
+            SqlCommand cmd = new SqlCommand(Query, con);
+            SqlDataAdapter sd = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sd.Fill(dt);
+
+            data.DataSource = dt;
+            con.Close();
+        }
+        private Image cImagee(byte[] data)
+        {
+            
+                MemoryStream ms = new MemoryStream(data);
+                return Image.FromStream(ms);
+        }
+        public Image cImage(byte[] data)
+        {
+            if (data == null || data.Length == 0 || data is DBNull)
+            {
+                return null;
+            }
+            else
+            {
+                MemoryStream ms = new MemoryStream(data);
+                return Image.FromStream(ms);
+            }
+        }
+
 
         public List<EmployeeData> EmpDataaS()
         {
@@ -109,7 +151,7 @@ namespace EmployeeSystem
                     em1.Status = rd1["status"].ToString();
                     em1.iDate = rd1["insert_date"].ToString();
                     em1.uDate = rd1["update_date"].ToString();
-                    em1.Image = rd1["image"].ToString();
+                    em1.Photo = cImage((byte[])rd1["image"]);
                     em1.id = (int)rd1["id"];
 
                     listdata1.Add(em1);
